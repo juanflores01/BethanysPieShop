@@ -34,9 +34,17 @@ namespace BethanysPieShop
 
             app.UseEndpoints(endpoints =>
             {
+                // this default block works.
+                //endpoints.MapGet("/", async context =>
+                //{
+                //    await context.Response.WriteAsync("Hello, Chola!");
+                //});
+
+                // this is from the tutorial.didn't work for me yet.  i'm probably missing more code somewhere else.
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
             });
         }
     }
